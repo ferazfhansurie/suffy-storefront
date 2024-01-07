@@ -73,7 +73,7 @@ const WithdrawalList: React.FC<WithdrawalListProps> = ({ customer, onRemove, onV
   const handleRemove = async (withdrawalToRemove: Withdrawal) => {
     const isConfirmed = window.confirm("Are you sure you want to remove this withdrawal request?");
     if (isConfirmed) {
-      setRemovingIds(new Set([...removingIds, withdrawalToRemove.id]));
+     // setRemovingIds(new Set([...removingIds, withdrawalToRemove.id]));
   
       // Add a delay to allow for the animation to complete before actually removing the item
       setTimeout(async () => {
@@ -89,7 +89,7 @@ const WithdrawalList: React.FC<WithdrawalListProps> = ({ customer, onRemove, onV
         }
           
           setWithdrawals(withdrawals.filter(withdrawal => withdrawal.id !== withdrawalToRemove.id));
-          setRemovingIds(new Set([...removingIds].filter(id => id !== withdrawalToRemove.id)));
+          //setRemovingIds(new Set([...removingIds].filter(id => id !== withdrawalToRemove.id)));
         } catch (error) {
           console.error('Error:', error);
         }
