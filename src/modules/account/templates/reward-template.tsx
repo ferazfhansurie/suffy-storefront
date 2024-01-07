@@ -134,7 +134,7 @@ const RewardTemplate: React.FC = () => {
         <div className="mb-8 flex flex-col gap-y-4">
         <h1 className="text-2xl-semi">Rewards</h1>
           <p className="text-base-regular">
-          Browse and redeem your available rewards. Explore the details of each reward and use your accumulated points to claim the benefits you've earned.
+          Browse and redeem your available rewards. Explore the details of each reward and use your accumulated points to claim the benefits youve earned.
           </p>
         </div>
         <div className="flex justify-between items-center mb-4">

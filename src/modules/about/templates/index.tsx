@@ -27,7 +27,7 @@ const AboutTemplate = () => {
         </div>
         <p className="font-suffy hero-subtext text-black-400 container-xl">
               
-        Suffy is a brand of bumiputra formula milk products and Muslim products that are processed and produced from their own factory in Ipoh, Perak. Suffy offers a wide variety of milk based on goat's milk and cow's milk for children, adults and the elderly.
+        Suffy is a brand of bumiputra formula milk products and Muslim products that are processed and produced from their own factory in Ipoh, Perak. Suffy offers a wide variety of milk based on goats milk and cows milk for children, adults and the elderly.
         <br/>
         <br/>
         Suffy products have Malaysian HALAL and HACCP certificates. Suffy is also a member of the Malaysian Muslim Consumer Association (PPIM). It is certain that the safety and quality of Suffy products are constantly monitored and in line with the needs of parents who want to find quality milk products.
@@ -56,7 +56,7 @@ const AboutTemplate = () => {
                 </h2>
                 <br/>
                 <h2 className="text-lg font-semibold">
-                A: IT'S 18,300
+                A: ITS 18,300
                 </h2>
                 <br/>
                 <br/>
@@ -107,7 +107,7 @@ const AboutTemplate = () => {
       <div className="numbered-blocks__wrapper ">
         <div className="numbered-blocks__container ">
           <div className="numbered-blocks__title ">
-            <span>This one's for the tea drinkers</span>
+            <span>This ones for the tea drinkers</span>
             
           </div>
           <div className="main-container">
@@ -137,7 +137,7 @@ const AboutTemplate = () => {
                 <br/>
                 Always Rolled Whole Leaves. 
                 </h4>
-                <p>We wouldn't have it any other way. Leaves that look like leaves. They're big and they're tasty; kept in tact to preserve their flavour and picked by a real person at just the right time.</p>
+                <p>We wouldnt have it any other way. Leaves that look like leaves. Theyre big and theyre tasty; kept in tact to preserve their flavour and picked by a real person at just the right time.</p>
                 <Image
                   src="/about4.png"
                   alt="Team Photo 2"

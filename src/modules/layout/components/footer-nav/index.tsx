@@ -112,7 +112,7 @@ const FooterNav = () => {
             </div>
             <div className="font-suffy flex-auto px-10 py-11 text-xs ">
             <div>
-            <p className="font-semibold">"Suffy Dairy Group Sdn Bhd is committed to meeting customer satisfaction by producing quality and safe products in accordance with HACCP principles. We also prioritize the need to meet food laws as stipulated in the Malaysian Food Act".</p>
+            <p className="font-semibold">Suffy Dairy Group Sdn Bhd is committed to meeting customer satisfaction by producing quality and safe products in accordance with HACCP principles. We also prioritize the need to meet food laws as stipulated in the Malaysian Food Act.</p>
             <p className="pt-4">When you visit or interact with our sites, services, applications, tools or messaging, we or our authorized service providers may use cookies, web beacons, and other similar technologies for storing information to help provide you with a better, faster and safer experience and for advertising purposes.</p>
             </div>
             </div>

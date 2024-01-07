@@ -17,7 +17,7 @@ const Bestsellers = () => {
   return (
     <div className="content-container background-image flex flex-col gap-y-8 pt-5">\
       <div className="flex justify-between items-center bg-transparent w-auto h-auto px-2">
-      <h2 className=" fifth-heading text-white text-2xl fosnt-semibold mr-4">Get milk 'dairy'.</h2>
+      <h2 className=" fifth-heading text-white text-2xl fosnt-semibold mr-4">Get milk dairy.</h2>
       <div className="w-auto">
         <input
           type="email"

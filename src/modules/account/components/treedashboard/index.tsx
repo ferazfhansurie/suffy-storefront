@@ -273,7 +273,7 @@ const TreeDashboard = ({ orders, customer }: OverviewProps) => {
                     </td>
             <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900" data-label="User Name">
               {`${earner.first_name} ${earner.last_name}`}
-              {customer?.first_name === earner.first_name && <span className="inline-block ml-2 font-semibold text-sky-700 flashing-text">(You're here!)</span>}
+              {customer?.first_name === earner.first_name && <span className="inline-block ml-2 font-semibold text-sky-700 flashing-text">(Youre here!)</span>}
             </td>
             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 flex justify-between items-center" data-label="Earnings">
             RM {earner.loyaltyPoints/100 || 0}
@@ -323,7 +323,7 @@ const TreeDashboard = ({ orders, customer }: OverviewProps) => {
                     </td>
            <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900" data-label="User Name">
              {`${recruiter.first_name} ${recruiter.last_name}`}
-             {customer?.first_name === recruiter.first_name && <span className="inline-block ml-2 font-semibold text-sky-700 flashing-text">(You're here!)</span>}
+             {customer?.first_name === recruiter.first_name && <span className="inline-block ml-2 font-semibold text-sky-700 flashing-text">(Youre here!)</span>}
            </td>
            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 flex justify-between items-center" data-label="Recruits">
              {recruiter.recruits || 0}
@@ -371,7 +371,7 @@ const TreeDashboard = ({ orders, customer }: OverviewProps) => {
                     </td>
            <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900" data-label="User Name">
              {`${profit.first_name} ${profit.last_name}`}
-             {customer?.first_name === profit.first_name && <span className="inline-block ml-2 font-semibold text-sky-700 flashing-text">(You're here!)</span>}
+             {customer?.first_name === profit.first_name && <span className="inline-block ml-2 font-semibold text-sky-700 flashing-text">(Youre here!)</span>}
            </td>
            <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 flex justify-between items-center" data-label="Recruits">
              {profit.totalBulkPurchase || 0}

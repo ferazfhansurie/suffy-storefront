@@ -264,7 +264,7 @@ const Membership: React.FC<OverviewProps> = ({ customer }) => {
     <div className="mb-8 flex flex-col gap-y-4">
       <h1 className="text-2xl-semi">Membership</h1>
       <p className="text-base-regular">
-      Explore your referral network. This section visualizes the connections between you and the individuals you've referred. Track the growth of your network and your impact within our community.
+      Explore your referral network. This section visualizes the connections between you and the individuals youve referred. Track the growth of your network and your impact within our community.
       </p>
       <div className="flex flex-col justify-center items-center">
         <div className="container mx-auto text-center pt-10">
