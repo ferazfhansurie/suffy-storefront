@@ -91,7 +91,7 @@ const TreeDashboard = ({ orders, customer }: OverviewProps) => {
   const [activeLeaderboard, setActiveLeaderboard] = useState('earners');
  
 
-  console.log(customer?.totalOrders);
+
 
   useEffect(() => {
     // Fetch the top earners from your API
@@ -196,7 +196,7 @@ const TreeDashboard = ({ orders, customer }: OverviewProps) => {
               {/* Total Orders Box */}
               <div className="bg-white shadow rounded-lg p-6 flex flex-col items-center justify-center">
                 <h3 className="text-md font-semibold text-gray-700">Total Orders</h3>
-                <p className="text-xl font-bold text-gray-900 mt-2"> {customer?.totalOrders || 0}</p>
+                <p className="text-xl font-bold text-gray-900 mt-2"> { 0}</p>
               
               </div>
               
