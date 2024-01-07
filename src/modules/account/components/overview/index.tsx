@@ -26,7 +26,7 @@ const getTotalLoyaltyPoints = (orders: Order[] | undefined): number => {
 
   return orders.reduce((total, order) => {
     // Assuming each order has a 'loyaltyPoints' attribute
-    return total + (order.loyaltyPoints || 0);
+    return total ;
   }, 0);
 };
 
