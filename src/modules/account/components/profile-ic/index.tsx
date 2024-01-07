@@ -79,7 +79,7 @@ const ProfileIC: React.FC<MyInformationProps> = ({ customer }) => {
         currentInfo={ 
           <>
           <div style={{ textAlign: 'left' }}> 
-           <div className="font-semibold">{customer.metadata?.IC}</div>
+        
           </div>
           </>
         }
