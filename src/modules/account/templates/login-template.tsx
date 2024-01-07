@@ -19,9 +19,22 @@ const LoginTemplate = () => {
   }, [customer, retrievingCustomer, router])
 
   return (
-    <div className="w-full flex justify-center py-24">
+    <div className=" grid justify-center py-24">
+      <div className="grid justify-center py-24">
+          
+        </div>
+        
+        <div className="grid justify-center mb-5">
+         
+          
+          
+        </div>
+      
+        
       {currentView === "sign-in" ? <Login /> : <Register />}
+      
     </div>
+    
   )
 }
 

@@ -32,11 +32,12 @@ const DropdownMenu = () => {
             <Link href="/store" className="relative flex h-full" passHref>
               <Popover.Button
                 className={clsx(
-                  "relative h-full flex items-center transition-all ease-out duration-200 focus:outline-none"
+                  "relative h-full flex items-center transition-all ease-out duration-200 focus:outline-none",
+                  "text-lg font-suffy  hover:underline  decoration-sky-500/30" // Added classes for bold and larger text
                 )}
                 onClick={() => push("/store")}
               >
-                Store
+                Shop
               </Popover.Button>
             </Link>
 

@@ -5,76 +5,46 @@ import Package from "@modules/common/icons/package"
 import User from "@modules/common/icons/user"
 import { formatAmount } from "medusa-react"
 import Link from "next/link"
+import React, { useEffect, useState } from 'react';
+import { FaRegCopy } from "react-icons/fa";
+
 
 type OverviewProps = {
-  orders?: Order[]
-  customer?: Omit<Customer, "password_hash">
-}
+  orders?: Order[];
+  customer?: Omit<Customer, "password_hash"> & {
+    metadata?: {
+      referral_code?: string;
+      referrer?: string;
+    };
+  };
+};
+
+const getTotalLoyaltyPoints = (orders: Order[] | undefined): number => {
+  if (!orders) {
+    return 0;
+  }
+
+  return orders.reduce((total, order) => {
+    // Assuming each order has a 'loyaltyPoints' attribute
+    return total + (order.loyaltyPoints || 0);
+  }, 0);
+};
 
 const Overview = ({ orders, customer }: OverviewProps) => {
+  const totalLoyaltyPoints = getTotalLoyaltyPoints(orders);
+  const copyToClipboard = (referralCode: string) => {
+    navigator.clipboard.writeText(referralCode).then(() => {
+      alert("Referral code copied to clipboard!");
+    }).catch(err => {
+      console.error('Could not copy text: ', err);
+    });
+  };
   return (
     <div>
-      <div className="small:hidden">
-        <div className="text-xl-semi mb-4 px-8">
-          Hello {customer?.first_name}
-        </div>
-        <div className="text-base-regular">
-          <ul>
-            <li>
-              <Link
-                href="/account/profile"
-                className="flex items-center justify-between py-4 border-b border-gray-200 px-8"
-              >
-                <>
-                  <div className="flex items-center gap-x-2">
-                    <User size={16} />
-                    <span>Profile</span>
-                  </div>
-                  <ChevronDown className="transform -rotate-90" />
-                </>
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/account/addresses"
-                className="flex items-center justify-between py-4 border-b border-gray-200 px-8"
-              >
-                <>
-                  <div className="flex items-center gap-x-2">
-                    <MapPin size={16} />
-                    <span>Addresses</span>
-                  </div>
-                  <ChevronDown className="transform -rotate-90" />
-                </>
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/account/orders"
-                className="flex items-center justify-between py-4 border-b border-gray-200 px-8"
-              >
-                <>
-                  <div className="flex items-center gap-x-2">
-                    <Package size={16} />
-                    <span>Orders</span>
-                  </div>
-                  <ChevronDown className="transform -rotate-90" />
-                </>
-              </Link>
-            </li>
-          </ul>
-        </div>
-      </div>
-
+    
       <div className="hidden small:block">
-        <div className="text-xl-semi flex justify-between items-start mb-4">
-          <span>Hello {customer?.first_name}</span>
-          <span className="text-small-regular text-gray-700">
-            Signed in as:{" "}
-            <span className="font-semibold">{customer?.email}</span>
-          </span>
-        </div>
-        <div className="flex flex-col py-8 border-t border-gray-200">
+    
+        <div className="flex flex-col py-8 border-t border-white">
           <div className="flex flex-col gap-y-4 h-full col-span-1 row-span-2 flex-1">
             <div className="flex items-start gap-x-16 mb-6">
               <div className="flex flex-col gap-y-4">
@@ -101,7 +71,26 @@ const Overview = ({ orders, customer }: OverviewProps) => {
                 </div>
               </div>
             </div>
+        
+           <div className="flex flex-col gap-y-4">
+            <h3 className="text-large-semi">Referral Code</h3>
+            <div className="flex items-center gap-x-2">
+      
+              <span className="text-3xl-semi leading-none bg-transparent border p-2 pl-4 pr-10 rounded">
+                {customer?.metadata?.referral_code || "No referral code available"}
+              </span>
+      
+              {/* Copy icon/button */}
+              {customer?.metadata?.referral_code && (
+                <button onClick={() => copyToClipboard(customer.metadata.referral_code)}>
+                  <FaRegCopy  /> {/* Replace with your actual icon or button */}
+                </button>
+              )}
+            </div>
+          </div>
 
+
+             
             <div className="flex flex-col gap-y-4">
               <div className="flex items-center gap-x-2">
                 <h3 className="text-large-semi">Recent orders</h3>
