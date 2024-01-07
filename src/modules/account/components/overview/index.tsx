@@ -81,11 +81,7 @@ const Overview = ({ orders, customer }: OverviewProps) => {
               </span>
       
               {/* Copy icon/button */}
-              {customer?.metadata?.referral_code && (
-                <button onClick={() => copyToClipboard(customer.metadata.referral_code)}>
-                  <FaRegCopy  /> {/* Replace with your actual icon or button */}
-                </button>
-              )}
+          
             </div>
           </div>
 
