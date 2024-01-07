@@ -124,7 +124,7 @@ const AboutTemplate = () => {
 
             <div>
               <h4>Sourced from farms we know.</h4>
-              <p>Tea grows in loads of places, but the taste can be completely different. Strange then that often the ingredients just say "100% Tea". Obvious, right? We choose origins and farms that achieve just the right taste for each blend and we put them right there on the pack.</p>
+              <p>Tea grows in loads of places, but the taste can be completely different. Strange then that often the ingredients just say 100% Tea. Obvious, right? We choose origins and farms that achieve just the right taste for each blend and we put them right there on the pack.</p>
             </div>
             </div>
             
@@ -177,7 +177,7 @@ const AboutTemplate = () => {
 
             <div>
               <h4>Sourced from farms we know.</h4>
-              <p>Tea grows in loads of places, but the taste can be completely different. Strange then that often the ingredients just say "100% Tea". Obvious, right? We choose origins and farms that achieve just the right taste for each blend and we put them right there on the pack.</p>
+              <p>Tea grows in loads of places, but the taste can be completely different. Strange then that often the ingredients just say 100% Tea. Obvious, right? We choose origins and farms that achieve just the right taste for each blend and we put them right there on the pack.</p>
             </div>
             </div>
 
