@@ -70,7 +70,7 @@ const WithdrawalList: React.FC<WithdrawalListProps> = ({ customer, onRemove, onV
   
   const [removingIds, setRemovingIds] = useState<Set<string>>(new Set());
 
-  const handleRemove = async (withdrawalToRemove: Withdrawal) => {
+  /*const handleRemove = async (withdrawalToRemove: Withdrawal) => {
     const isConfirmed = window.confirm("Are you sure you want to remove this withdrawal request?");
     if (isConfirmed) {
       setRemovingIds(new Set([...removingIds, withdrawalToRemove.id]));
@@ -97,7 +97,7 @@ const WithdrawalList: React.FC<WithdrawalListProps> = ({ customer, onRemove, onV
     } else {
       console.log("Removal cancelled by the user.");
     }
-  };
+  };*/
 
   return (
     <div className="mt-2">
@@ -124,9 +124,7 @@ const WithdrawalList: React.FC<WithdrawalListProps> = ({ customer, onRemove, onV
        <button onClick={() => onViewDetails(withdrawal)} className="bg-[#0ea5e9] text-white text-xs sm:text-sm px-2 sm:px-4 py-1 sm:py-2 rounded">
               View Details
             </button>
-            <button onClick={() => handleRemove(withdrawal)} className="text-red-500">
-              Remove
-            </button>
+      
           </div>
           
         </li>
