@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import { useCustomerOrders, useMeCustomer } from "medusa-react"
 
 import WithdrawalForm from "@modules/account/components/WithdrawalForm"
-import WithdrawalList from "@modules/account/components/WithdrawalList"
 import WithdrawalTable from "@modules/account/components/WithdrawalTable"
 
 function getStatusColor(status: string) {
@@ -102,12 +101,7 @@ const WithdrawalsPage: React.FC = () => {
 
           <div className="mb-8 col-span-full lg:col-span-2"> {/* Updated col-span */}
             <h2 className="text-2xl font-bold">Pending Withdrawals</h2>
-            <WithdrawalList
-              customer={customer}
-              withdrawals={pendingWithdrawals}
-              onRemove={handleRemovePendingWithdrawal}
-              onViewDetails={(withdrawal) => handleViewDetails(withdrawal)}
-            />
+           
           </div>
         </div>
        
