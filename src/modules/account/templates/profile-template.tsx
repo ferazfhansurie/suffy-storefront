@@ -7,7 +7,7 @@ import ProfilePassword from "@modules/account/components/profile-password"
 import ProfileBillingAddress from "../components/profile-billing-address"
 import ProfilePhone from "../components/profile-phone"
 import ProfileIC from "@modules/account/components/profile-ic"
-import ProfileAddress from "@modules/account/components/profile-address"
+
 
 const ProfileTemplate = () => {
   const { customer, retrievingCustomer, refetchCustomer } = useAccount()
@@ -39,7 +39,7 @@ const ProfileTemplate = () => {
         <Divider />
         <ProfileBillingAddress customer={customer} />
         <Divider />
-        <ProfileAddress customer={customer} />
+     
       </div>
     </div>
   )
