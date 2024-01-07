@@ -112,7 +112,7 @@ const WithdrawalList: React.FC<WithdrawalListProps> = ({ customer, onRemove, onV
           <div className="">
             <h3 className="text-lg font-bold mb-2">Withdrawal #{index + 1}</h3>
             <p>Date: {new Date(withdrawal.created_at).toLocaleDateString()}</p>
-            <p>Total Amount: RM {withdrawal.total / 100}</p>
+            <p>Total Amount: RM {withdrawal.total ? parseFloat(withdrawal.total) / 100 : 0}</p>
             <p >Status: <span style={{ color: getStatusColor(withdrawal.status) }}>{withdrawal.status}</span> </p>
 
                
