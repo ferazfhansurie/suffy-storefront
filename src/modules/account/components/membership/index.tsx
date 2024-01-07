@@ -232,10 +232,7 @@ const Membership: React.FC<OverviewProps> = ({ customer }) => {
             id: "rootID",
             first_name: customer?.first_name,
             last_name: customer?.last_name,
-            loyaltyPoints: customer?.loyaltyPoints,
-            totalOrders: customer?.totalOrders,
             created_at: customer?.created_at,
-            totalBulkPurchase: customer?.totalBulkPurchase,
             isRoot: true, 
             children: convertToTreeStructure(data, customer),
           
