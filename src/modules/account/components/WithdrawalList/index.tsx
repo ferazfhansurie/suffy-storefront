@@ -73,7 +73,7 @@ const WithdrawalList: React.FC<WithdrawalListProps> = ({ customer, onRemove, onV
   const handleRemove = async (withdrawalToRemove: Withdrawal) => {
     const isConfirmed = window.confirm("Are you sure you want to remove this withdrawal request?");
     if (isConfirmed) {
-     // setRemovingIds(new Set([...removingIds, withdrawalToRemove.id]));
+      setRemovingIds(new Set([...removingIds, withdrawalToRemove.id]));
   
       // Add a delay to allow for the animation to complete before actually removing the item
       setTimeout(async () => {
@@ -112,6 +112,7 @@ const WithdrawalList: React.FC<WithdrawalListProps> = ({ customer, onRemove, onV
           <div className="">
             <h3 className="text-lg font-bold mb-2">Withdrawal #{index + 1}</h3>
             <p>Date: {new Date(withdrawal.created_at).toLocaleDateString()}</p>
+            <td className="py-2 px-4 border-b">RM {withdrawal.total ? parseFloat(withdrawal.total) / 100 : 0}</td>
 
             <p >Status: <span style={{ color: getStatusColor(withdrawal.status) }}>{withdrawal.status}</span> </p>
 
